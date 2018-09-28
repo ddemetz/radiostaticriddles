@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <!--<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
+        <!--<script src="https://3d.io/releases/3dio-js/1.x.x-beta/3dio.min.js"></script>-->
+        <!--<script src="ilanastest.js"></script>-->
+        <!--<script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>-->
+        
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
+        <script src="ilanastest.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+    </head>
+    <body>
+        <a-scene>
+            
+             <a-assets>
+    <video id="kwk" autoplay loop="true" src="https://youtu.be/bETpwLSNcqM"></video>
+  </a-assets>
+            <a-camera id= "cam">
+                <a-cursor></a-cursor>
+             </a-camera>
+        
+        <!--ITEMS WITH AUDIO-->
+            <a-entity id= "computer" io3d-furniture="id:65ff899e-f684-43c4-be79-ed11103adcc0" onclick="changeVolumeComputer()" rotation="0 -90 0" position="-3.17 1 3.36" sound="src: url(audio/godsPlan.mp3); autoplay: true; loop:true; volume:10" ></a-entity>
+                <!--computer-->
+            <a-entity id= "guitar" io3d-furniture="id:038fe87e-9491-42dc-8442-7d66a6c32171" onclick="changeVolumeGuitar()" rotation="0 45 0" position="-.2 0 -5" sound="src: url(audio/youBelongWithMe.mp3); autoplay: true; loop:true; volume:20"></a-entity>
+                <!--guitar-->
+            <a-entity id= "piano" io3d-furniture="id:9ce8547d-59ec-4205-91d8-e578f19d9e63" onclick="changeVolumePiano()" rotation="0 -45 0" position="6 0 -3.6" scale="1.4 1.4 1.4" sound="src: url(audio/letTheBodiesHitTheFloor.mp3); autoplay: true; loop:true; volume:10"></a-entity>
+                <!--grand piano-->
+            <a-entity id= "horseLamp" io3d-furniture="id:6c35fc53-f81c-452a-9033-80582856782b" onclick="changeVolumeHorseLamp()" position="-3.3 .75 -1.4" scale=".3 .3 .3" rotation= "-20 220 20" sound="src: url(audio/cottonEyedJoe.mp3); autoplay: true; loop:true; volume:20"></a-entity>
+                <!--horse lamp-->
+            <a-entity id= "recordPlayer" io3d-furniture="id:1d95c8eb-6560-48a2-8eca-7e7af87343d6" onclick="changeVolumeRecordPlayer()" position="1.5 0.76 -2.47" sound="src: url(audio/malibu1992.mp3); autoplay: true; loop:true; volume:10"></a-entity>
+                <!--record player-->
+            <a-entity id= "television" io3d-furniture="id:6e2d041b-1a50-45a4-b418-eca96e7dbe70" onclick="changeVolumeTelevision()" rotation="0 180 0" position="2 .75 -.75" sound="src: url(audio/shakeItOff.mp3); autoplay: true; loop:true; volume:10"></a-entity>
+                <!--television-->
+            
+        <!--ITEMS WITHOUT AUDIO-->
+            <a-entity io3d-furniture="id:65f18dad-20d1-4a7d-ae83-8d2c97dc7be8" position="-2 0 -5.3"></a-entity>
+                <!--shelf-->
+            <a-entity io3d-furniture="id:bc8f1f66-6fd6-4907-9a3f-24f13d1eadf2" rotation="0 180 0" position="-3.5 0 -1.3"></a-entity>
+                <!--pig table-->
+            <a-entity io3d-furniture="id:aa4829c3-6baa-4bd6-9056-90b93475e7e4" position="2 0 -4.7" scale="1.5 1.5 1.5"></a-entity>
+                <!--sofa-->
+            <a-entity io3d-furniture="id:fe34c340-6c3a-4ae2-a560-073d14d0bc86" position="2 0 -0.75"></a-entity>
+                <!--table for the tv-->
+            <a-entity io3d-furniture="id:c6dca1b7-ce1f-49fe-8cce-83c77fb0d14b" position="2 0 -2.5"></a-entity>
+                <!--casual table in front of sofa-->
+            <a-entity io3d-furniture="id:4385d6a9-d5ec-44fa-93d0-1b79d00b2b2a" position="-3.35 0 3.4" scale="1.3 1.3 1.3"></a-entity>
+                <!--desk-->
+            <a-entity io3d-furniture="id:b5d3dc04-6898-4b06-8c0f-66254b60e93b" rotation="0 90 0" position="-4 0 3.4" scale="1.5 1.5 1.5"></a-entity>
+                <!--chair for desk-->
+            <a-entity io3d-furniture="id:8c4c4d48-dc51-4371-876a-09d51f10b66b" position="5.4 0 -5"></a-entity>
+                <!--plant-->
+            <a-entity io3d-furniture="id:07fa4cb7-54ef-4a2a-8e69-9e16cf585025" position="5.409 -0.033 4.221" scale="1.5 1.5 1.5" rotation="0 -90 0"></a-entity>
+                <!--bed-->
+           <a-entity io3d-furniture="id:28e7c2f6-42f9-4c33-b1e7-3972dc461d59" position="-3.958 0 -5.088" rotation="0 45 0" scale="2 2 2"></a-entity>
+                <!--washing machine-->
+            <a-entity io3d-furniture="id:9a17f541-886e-467e-b740-cf665d74af11" position="-3.37 1 2.76"></a-entity>
+                <!--flower-->
+            <a-entity io3d-furniture="id:9ba22539-e7b0-4993-a24d-4a960577ff54" position="2.285 0 -2.767" scale="1.5 1.5 1.5"></a-entity>
+                <!--cow rug-->
+            <a-entity io3d-furniture="id:6a60a2b2-d171-428c-ac19-d8a7a8aacda0" position="2.274 0.76 -2.422"></a-entity>
+                <!--books-->
+            <a-entity io3d-furniture="id:b7fa1695-06f8-4fc5-b6d0-3f986137b9a2" position="-3.3 0 5" rotation="0 180 0" scale="1.5 1.5 1.5"></a-entity>
+                <!--lamp-->
+            <a-entity io3d-furniture="id:ce978ca9-1aaf-4e7d-8c3e-1f9856ebe403" position="-5 0 .7" rotation="0 90 0"></a-entity>
+                <!--radiator-->
+            <a-entity io3d-furniture="id:29f16999-2b62-4e3f-bc59-bef46a1d0719" position="4.405 1.047 3.456" scale="1.2 1.2 1.2" rotation="0 45 0"></a-entity>
+                <!--bag-->
+            <a-entity io3d-furniture="id:f103bb18-96ba-4734-8905-87cd43bfb3ce" position="7 0 0.6" rotation="0 -90 0" scale="2.5 3 2"></a-entity>
+                <!--fireplace-->
+            <a-entity io3d-furniture="id:b1d394a5-6ba2-47ee-8f59-1681677987ba" position="-1.5 0 5"></a-entity>
+                <!--another plant-->
+            <a-entity io3d-furniture="id:0b5f9e5e-0ac4-40b1-92f3-07ef52d17f33" position="5.854 0 2.151" rotation="0 270 0" scale="2 2 2"></a-entity>
+                <!--elephant table-->
+            <a-entity io3d-furniture="id:b6abb507-1941-45b6-a514-ae37c3f151a4" position="1.1 0 .2" scale="4 0.5 5"></a-entity>
+                <!--floor-->
+            <a-entity io3d-furniture="id:bc1e971a-b055-42ab-ab2f-f549a0d84684" position="1 1 -5.5"></a-entity>
+                <!--picture-->
+            <a-entity io3d-furniture="id:adc5a904-e3ef-4353-9cd4-a27a735fef43" position="2. 1.2 -5.5"></a-entity>
+                <!--picture2-->
+            <a-entity io3d-furniture="id:3c0e5f55-b2f4-4f4f-a6e1-f49600cf1707" position="3.1 1.1 -5.5" scale=".75 .75 .75"></a-entity>
+                <!--picture3-->
+            <a-entity io3d-furniture="id:43d65aea-8ea5-4725-ad91-c28ddb03233b" position="-3.422 0.769 -1.261" rotation="0 80 0"></a-entity>
+              <!--bear-->
+            <a-entity io3d-furniture="id:28e40b29-4e15-43d3-b0f3-1d01e3c6c0d2" position="1.073 0 4.729" rotation="0 180 0" scale="1.3 1.3 1.3"></a-entity>
+              <!--bathtub-->
+            <a-entity io3d-furniture="id:ffabcd66-349b-4630-88ea-a8d0bafab824" position="-4.493 0.006 -2.958" scale="1.3 1.3 1.3"></a-entity>
+              <!--plant 2-->
+             <a-entity io3d-furniture="id:6492f889-85ee-4bf5-b761-f27d5bc9a825" position="-3.745 0.007 3.3" scale="1.5 1.5 1.5"></a-entity>
+               <!--carpet colored-->
+
+            <a-box scale="0.2 2 2" position="-4.949 2.321 2.006" material="" src="how_to_play.png"></a-box>
+            <a-box scale="0.2 2 3" position="-4.949 2.321 -0.704" src="riddles.png"></a-box>
+            <a-box data-cloud9-id="43" position="1.432 1.949 5.456" scale="1.5 1 0" src="klass.JPG"></a-box>
+            
+            
+            <a-video data-cloud9-id="44" src="kwk2.mp4" position="-3.221 1.279 3.355" rotation="15.5 90 0" scale="0.6 0.4 0.5" autoplay loop="true" volume="0"></a-video>
+
+            <a-video data-cloud9-id="44" src="kwk.mp4" position="2.007 1.287 -0.809" scale="1.7 0.9 0.5" autoplay="" loop="true" volume="0"></a-video>
+            
+            
+            <a-sphere id= "guitarButton" onclick= "changeVolumeGuitar()" color="red" position="-0.1 0.3 -4.8" scale="0.05 0.05 0.05"></a-sphere>
+                <!--guitarbtn-->
+            <a-sphere id = "recordPlayerButton" onclick= "changeVolumeRecordPlayer()" color="#FAA3A3" position="1.363 0.84 -2.282" scale="0.02 0.02 0.02"></a-sphere>
+                <!--record player btn-->
+            <a-sphere id = "computerButton" onclick= "changeVolumeComputer()" color="red" position="-3.228 0.985 3.359" scale="0.03 0.03 0.03"></a-sphere>
+                <!--computerbtn-->
+            <a-sphere id = "horseLampButton" onclick= "changeVolumeHorseLamp()" color="#403A3A" position="-3.221 1.181 -1.539" scale="0.05 0.05 0.05"></a-sphere>
+                <!--horse lampbtn-->
+            <a-sphere id = "pianoButton" onclick= "changeVolumePiano()" color="red" position="5.652 1.132 -2.806" scale="0.05 0.05 0.05"></a-sphere>
+                <!--pianobtn-->
+            <a-sphere id = "televisionButton" onclick= "changeVolumeTelevision()" color="red" position="1.327 0.843 -0.807" scale="0.03 0.03 0.03"></a-sphere>
+                <!--televisionbtn-->
+                
+                
+            <a-box color="#bdad94"
+                width="17" height="5" depth="3"
+                position="1.3 2.5 -7"
+             ></a-box>
+             <a-box color="#bdad94"
+                width="17" height="5" depth="3"
+                position="0.7 2.5 7"
+             ></a-box>
+             <a-box color="#bdad94"
+                width="3" height="5" depth="13"
+                position="8.6 2.5 0.034"
+             ></a-box>
+             <a-box color="#bdad94"
+                width="3" height="5" depth="13"
+                position="-6.4 2.5 0"
+             ></a-box>
+             
+        </a-scene>
+    
+    
+    </body>
+</html>

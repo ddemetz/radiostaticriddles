@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="ilanastest.js"></script>
+  </head>
+
+  <body>
+
+    <a-scene>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+      <a-sphere postiton = "8.120 1.680 -2.484" radius = "1" color = "#d2d5db"></a-sphere>
+      <a entity camera look-controls wasd-constros position= "-2 0 0"></a>
+      <a-sky src= "https://www.jamesfmackenzie.com/img/posts/equirectangular-pano.png"></a-sky>
+      <a-entity id= "box" onclick="changeVolume()" position="2.9531354841695485 0.9201789712838817 -11.152916958332131" geometry="height:10;width:10;depth:10" sound="src: url(audio/godsPlan.mp3); autoplay: true; loop:true; volume:10" ></a-entity>
+    </a-scene>
+
+  </body>
+
+</html>
